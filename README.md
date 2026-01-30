@@ -20,7 +20,7 @@ A signal-slot system designed based on `stdexec`, providing both a Qt-like simpl
     };
 
     // Differentiating signals with identical parameters
-    struct IntSignal : daking::signal<int> { using base::base; /* Inherit constructors */ };
+    struct IntSignal : signal<int> { using base::base; /* Inherit constructors */ };
 
     // Extending emission capabilities
     struct MyEmitter2 : MyEmitter, enable_signal<IntSignal> {
@@ -125,4 +125,4 @@ A CMake configuration is also provided to reproduce BENCHMARK tests and build ex
 
 ## License
 
-daking::signal is licensed under the [MIT License](https://www.google.com/search?q=./LICENSE.txt).
+daking::signal is licensed under the [MIT License](./LICENSE.txt).

@@ -28,7 +28,7 @@
     }; // 可以发送signal<int>和signal<void>的emitter;
 
     // 区分同参数signal
-    struct IntSignal : daking::signal<int> { using base::base; /* 继承构造函数*/ };
+    struct IntSignal : signal<int> { using base::base; /* 继承构造函数*/ };
 
     // 扩展发送能力
     struct MyEmitter2 : MyEmitter, enable_signal<IntSignal> {
@@ -125,4 +125,4 @@ CPU Caches:
 
 ## 许可证 (LICENSE)
 
-daking::signal 使用 [MIT 许可证](https://www.google.com/search?q=./LICENSE.txt) 授权。
+daking::signal 使用 [MIT 许可证](./LICENSE.txt) 授权。
