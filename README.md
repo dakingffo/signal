@@ -2,7 +2,7 @@
 
 *Lightweight signal-slot based on stdexec*
 
-[Chinese](./README.zh.md)
+[简体中文](./README.zh.md)
 
 A signal-slot system designed based on `stdexec`, providing both a Qt-like simple `signal-slot` mechanism and a strongly-typed `sender/receiver` style system.
 
@@ -56,7 +56,7 @@ Each `emitter` embeds a `stdexec::async_scope` to ensure that ongoing slot event
 
 Signals inheriting from `signal<void>` correspond to slots that are copyable `stdexec::sender` objects. Other `signal` types correspond to slots that are copyable `stdexec::sender_adaptor_closure` objects, with call signatures matching the signal parameters. Since a single signal can be dispatched to multiple slots, parameters for non-void signals must be copyable.
 
-`Connection management:`
+`connection management:`
 
 ```c++
     using daking::signal;
